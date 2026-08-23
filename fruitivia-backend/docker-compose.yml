@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: fruitivia-db
+    environment:
+      POSTGRES_USER: fruitivia_user
+      POSTGRES_PASSWORD: fruitivia_password
+      POSTGRES_DB: fruitivia
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
