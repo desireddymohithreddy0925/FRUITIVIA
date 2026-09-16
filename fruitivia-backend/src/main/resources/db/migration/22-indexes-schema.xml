@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="22-01" author="fruitivia">
+        <createIndex tableName="fruits" indexName="idx_fruits_name">
+            <column name="name"/>
+        </createIndex>
+        <createIndex tableName="fruits" indexName="idx_fruits_category">
+            <column name="category"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="22-02" author="fruitivia">
+        <createIndex tableName="fruit_batches" indexName="idx_fruit_batches_fruit_id">
+            <column name="fruit_id"/>
+        </createIndex>
+        <createIndex tableName="fruit_batches" indexName="idx_fruit_batches_variety_id">
+            <column name="variety_id"/>
+        </createIndex>
+        <createIndex tableName="fruit_batches" indexName="idx_fruit_batches_quality_grade">
+            <column name="quality_grade"/>
+        </createIndex>
+        <createIndex tableName="fruit_batches" indexName="idx_fruit_batches_expiration_date">
+            <column name="expiration_date"/>
+        </createIndex>
+        <createIndex tableName="fruit_batches" indexName="idx_fruit_batches_warehouse_id">
+            <column name="warehouse_id"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="22-03" author="fruitivia">
+        <createIndex tableName="inventory" indexName="idx_inventory_available_quantity">
+            <column name="available_quantity"/>
+        </createIndex>
+        <createIndex tableName="inventory" indexName="idx_inventory_warehouse_id">
+            <column name="warehouse_id"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="22-04" author="fruitivia">
+        <createIndex tableName="orders" indexName="idx_orders_buyer_id">
+            <column name="buyer_id"/>
+        </createIndex>
+        <createIndex tableName="orders" indexName="idx_orders_status">
+            <column name="status"/>
+        </createIndex>
+        <createIndex tableName="orders" indexName="idx_orders_created_at">
+            <column name="created_at"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="22-05" author="fruitivia">
+        <createIndex tableName="shipments" indexName="idx_shipments_destination_country">
+            <column name="destination_country"/>
+        </createIndex>
+        <createIndex tableName="shipments" indexName="idx_shipments_status">
+            <column name="status"/>
+        </createIndex>
+        <createIndex tableName="shipments" indexName="idx_shipments_expected_delivery">
+            <column name="expected_delivery"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>

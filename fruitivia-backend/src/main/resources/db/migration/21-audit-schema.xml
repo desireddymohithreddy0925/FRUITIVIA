@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="21-01" author="fruitivia">
+        <createTable tableName="revinfo">
+            <column name="rev" type="integer" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="revtstmp" type="bigint"/>
+            <column name="actor" type="varchar(255)"/>
+            <column name="correlation_id" type="varchar(255)"/>
+        </createTable>
+
+        <createTable tableName="fruit_batches_aud">
+            <column name="id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="tinyint"/>
+            
+            <column name="batch_number" type="varchar(255)"/>
+            <column name="procurement_item_id" type="uuid"/>
+            <column name="supplier_id" type="uuid"/>
+            <column name="fruit_id" type="uuid"/>
+            <column name="variety_id" type="uuid"/>
+            <column name="quality_inspection_id" type="uuid"/>
+            <column name="quality_grade" type="varchar(50)"/>
+            <column name="approved_quantity" type="decimal(19,4)"/>
+            <column name="warehouse_id" type="uuid"/>
+            <column name="harvest_date" type="datetime"/>
+            <column name="packing_date" type="datetime"/>
+            <column name="shelf_life_days" type="int"/>
+            <column name="expiration_date" type="datetime"/>
+            <column name="status" type="varchar(50)"/>
+        </createTable>
+
+        <addPrimaryKey tableName="fruit_batches_aud" columnNames="id, rev" constraintName="pk_fruit_batches_aud"/>
+        <addForeignKeyConstraint baseTableName="fruit_batches_aud" baseColumnNames="rev" constraintName="fk_fruit_batches_aud_rev" referencedTableName="revinfo" referencedColumnNames="rev"/>
+
+        <createTable tableName="quality_inspections_aud">
+            <column name="id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="tinyint"/>
+            
+            <column name="inspection_number" type="varchar(255)"/>
+            <column name="procurement_item_id" type="uuid"/>
+            <column name="inspector_id" type="uuid"/>
+            <column name="inspected_quantity" type="decimal(19,4)"/>
+            <column name="accepted_quantity" type="decimal(19,4)"/>
+            <column name="rejected_quantity" type="decimal(19,4)"/>
+            <column name="grade" type="varchar(50)"/>
+            <column name="size" type="varchar(50)"/>
+            <column name="color" type="varchar(50)"/>
+            <column name="weight" type="double"/>
+            <column name="defects" type="text"/>
+            <column name="visual_quality" type="varchar(255)"/>
+            <column name="phytosanitary_status" type="varchar(255)"/>
+            <column name="inspection_date" type="datetime"/>
+            <column name="notes" type="text"/>
+            <column name="status" type="varchar(50)"/>
+        </createTable>
+
+        <addPrimaryKey tableName="quality_inspections_aud" columnNames="id, rev" constraintName="pk_quality_inspections_aud"/>
+        <addForeignKeyConstraint baseTableName="quality_inspections_aud" baseColumnNames="rev" constraintName="fk_quality_inspections_aud_rev" referencedTableName="revinfo" referencedColumnNames="rev"/>
+
+        <createTable tableName="inventories_aud">
+            <column name="id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="tinyint"/>
+            
+            <column name="batch_id" type="uuid"/>
+            <column name="warehouse_id" type="uuid"/>
+            <column name="storage_location_id" type="uuid"/>
+            <column name="total_quantity" type="decimal(19,4)"/>
+            <column name="available_quantity" type="decimal(19,4)"/>
+            <column name="reserved_quantity" type="decimal(19,4)"/>
+            <column name="packed_quantity" type="decimal(19,4)"/>
+            <column name="dispatched_quantity" type="decimal(19,4)"/>
+            <column name="damaged_quantity" type="decimal(19,4)"/>
+            <column name="expired_quantity" type="decimal(19,4)"/>
+        </createTable>
+        
+        <addPrimaryKey tableName="inventories_aud" columnNames="id, rev" constraintName="pk_inventories_aud"/>
+        <addForeignKeyConstraint baseTableName="inventories_aud" baseColumnNames="rev" constraintName="fk_inventories_aud_rev" referencedTableName="revinfo" referencedColumnNames="rev"/>
+
+        <createTable tableName="orders_aud">
+            <column name="id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="tinyint"/>
+            
+            <column name="order_number" type="varchar(255)"/>
+            <column name="buyer_id" type="uuid"/>
+            <column name="quotation_id" type="uuid"/>
+            <column name="status" type="varchar(50)"/>
+            <column name="currency_code" type="varchar(10)"/>
+            <column name="total_amount" type="decimal(19,4)"/>
+        </createTable>
+
+        <addPrimaryKey tableName="orders_aud" columnNames="id, rev" constraintName="pk_orders_aud"/>
+        <addForeignKeyConstraint baseTableName="orders_aud" baseColumnNames="rev" constraintName="fk_orders_aud_rev" referencedTableName="revinfo" referencedColumnNames="rev"/>
+
+        <createTable tableName="payments_aud">
+            <column name="id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="tinyint"/>
+            
+            <column name="order_id" type="uuid"/>
+            <column name="amount" type="decimal(19,4)"/>
+            <column name="currency_code" type="varchar(10)"/>
+            <column name="method" type="varchar(50)"/>
+            <column name="transaction_reference" type="varchar(255)"/>
+            <column name="status" type="varchar(50)"/>
+            <column name="payment_date" type="datetime"/>
+        </createTable>
+
+        <addPrimaryKey tableName="payments_aud" columnNames="id, rev" constraintName="pk_payments_aud"/>
+        <addForeignKeyConstraint baseTableName="payments_aud" baseColumnNames="rev" constraintName="fk_payments_aud_rev" referencedTableName="revinfo" referencedColumnNames="rev"/>
+
+        <createTable tableName="shipments_aud">
+            <column name="id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="tinyint"/>
+            
+            <column name="order_id" type="uuid"/>
+            <column name="status" type="varchar(50)"/>
+            <column name="container_number" type="varchar(255)"/>
+            <column name="shipping_company" type="varchar(255)"/>
+            <column name="tracking_number" type="varchar(255)"/>
+            <column name="origin_port" type="varchar(255)"/>
+            <column name="destination_port" type="varchar(255)"/>
+            <column name="destination_country" type="varchar(2)"/>
+            <column name="shipment_date" type="datetime"/>
+            <column name="expected_delivery" type="datetime"/>
+            <column name="actual_delivery" type="datetime"/>
+        </createTable>
+        
+        <addPrimaryKey tableName="shipments_aud" columnNames="id, rev" constraintName="pk_shipments_aud"/>
+        <addForeignKeyConstraint baseTableName="shipments_aud" baseColumnNames="rev" constraintName="fk_shipments_aud_rev" referencedTableName="revinfo" referencedColumnNames="rev"/>
+
+        <createTable tableName="customs_clearances_aud">
+            <column name="id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="tinyint"/>
+            
+            <column name="order_id" type="uuid"/>
+            <column name="declaration_id" type="uuid"/>
+            <column name="status" type="varchar(50)"/>
+            <column name="inspection_status" type="varchar(255)"/>
+            <column name="remarks" type="varchar(2000)"/>
+            <column name="clearance_date" type="datetime"/>
+        </createTable>
+
+        <addPrimaryKey tableName="customs_clearances_aud" columnNames="id, rev" constraintName="pk_customs_clearances_aud"/>
+        <addForeignKeyConstraint baseTableName="customs_clearances_aud" baseColumnNames="rev" constraintName="fk_customs_clearances_aud_rev" referencedTableName="revinfo" referencedColumnNames="rev"/>
+
+        <createTable tableName="export_documents_aud">
+            <column name="id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rev" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="tinyint"/>
+            
+            <column name="type" type="varchar(50)"/>
+            <column name="order_id" type="uuid"/>
+            <column name="shipment_id" type="uuid"/>
+            <column name="storage_key" type="varchar(255)"/>
+            <column name="filename" type="varchar(255)"/>
+            <column name="content_type" type="varchar(255)"/>
+            <column name="size_bytes" type="bigint"/>
+            <column name="generated_by" type="varchar(255)"/>
+            <column name="generated_at" type="datetime"/>
+            <column name="version" type="integer"/>
+        </createTable>
+
+        <addPrimaryKey tableName="export_documents_aud" columnNames="id, rev" constraintName="pk_export_documents_aud"/>
+        <addForeignKeyConstraint baseTableName="export_documents_aud" baseColumnNames="rev" constraintName="fk_export_documents_aud_rev" referencedTableName="revinfo" referencedColumnNames="rev"/>
+    </changeSet>
+
+    <changeSet id="21-02" author="fruitivia">
+        <createTable tableName="audit_logs">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="actor" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="action" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resource_type" type="varchar(255)"/>
+            <column name="resource_id" type="varchar(255)"/>
+            <column name="metadata" type="text"/>
+            <column name="correlation_id" type="varchar(255)"/>
+            <column name="timestamp" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

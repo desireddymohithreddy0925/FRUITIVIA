@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="07-quality-control-schema-01" author="fruitivia">
+        <createTable tableName="quality_inspections">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="inspection_number" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="procurement_item_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_qi_procurement_item" references="procurement_items(id)"/>
+            </column>
+            <column name="inspector_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_qi_inspector" references="users(id)"/>
+            </column>
+            <column name="inspected_quantity" type="DECIMAL(19, 4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="accepted_quantity" type="DECIMAL(19, 4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rejected_quantity" type="DECIMAL(19, 4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="grade" type="VARCHAR(50)"/>
+            <column name="size" type="VARCHAR(255)"/>
+            <column name="color" type="VARCHAR(255)"/>
+            <column name="weight" type="DOUBLE"/>
+            <column name="defects" type="TEXT"/>
+            <column name="visual_quality" type="VARCHAR(255)"/>
+            <column name="phytosanitary_status" type="VARCHAR(255)"/>
+            <column name="inspection_date" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notes" type="TEXT"/>
+            <column name="status" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="BOOLEAN" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="quality_inspection_history">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="quality_inspection_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_qih_inspection" references="quality_inspections(id)"/>
+            </column>
+            <column name="previous_status" type="VARCHAR(50)"/>
+            <column name="new_status" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="changed_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comments" type="TEXT"/>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="BOOLEAN" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

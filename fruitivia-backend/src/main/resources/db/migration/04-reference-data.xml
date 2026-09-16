@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="4" author="fruitivia">
+        <!-- Initial admin user (password: admin123 hashed with bcrypt) -->
+        <insert tableName="users">
+            <column name="id" value="00000000-0000-0000-0000-000000000000"/>
+            <column name="name" value="System Administrator"/>
+            <column name="email" value="admin@fruitivia.com"/>
+            <column name="password_hash" value="$2a$10$wO3Y1Xv3R2g8tZ2g.3Z1..wO3Y1Xv3R2g8tZ2g.3Z1..wO3Y1Xv3R"/> 
+            <column name="role" value="ADMIN"/>
+            <column name="active" valueBoolean="true"/>
+            <column name="created_at" valueDate="now()"/>
+            <column name="updated_at" valueDate="now()"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

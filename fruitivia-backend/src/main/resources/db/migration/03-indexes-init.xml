@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="3" author="fruitivia">
+        <createIndex tableName="users" indexName="idx_users_email">
+            <column name="email"/>
+        </createIndex>
+        
+        <createIndex tableName="buyers" indexName="idx_buyers_contact_email">
+            <column name="contact_email"/>
+        </createIndex>
+        
+        <createIndex tableName="fruits" indexName="idx_fruits_name">
+            <column name="name"/>
+        </createIndex>
+        
+        <createIndex tableName="fruit_varieties" indexName="idx_fruit_varieties_fruit_id">
+            <column name="fruit_id"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="05-supplier-schema-update-01" author="fruitivia">
+        <addColumn tableName="suppliers">
+            <column name="supplier_code" type="VARCHAR(255)">
+                <constraints nullable="true" unique="true"/>
+            </column>
+            <column name="contact_email" type="VARCHAR(255)"/>
+            <column name="farm_location" type="VARCHAR(255)"/>
+            <column name="farming_information" type="TEXT"/>
+        </addColumn>
+
+        <!-- Generate a default UUID for existing suppliers to satisfy NOT NULL if we wanted to enforce it later, 
+             but we will keep nullable="true" then alter to nullable="false" once populated. -->
+        <update tableName="suppliers">
+            <column name="supplier_code" valueComputed="concat('SUP-', substr(id::text, 1, 8))"/>
+        </update>
+
+        <addNotNullConstraint tableName="suppliers" columnName="supplier_code" columnDataType="VARCHAR(255)"/>
+
+        <!-- Rename contact_number to phone -->
+        <renameColumn tableName="suppliers" oldColumnName="contact_number" newColumnName="phone" columnDataType="VARCHAR(255)"/>
+    </changeSet>
+
+</databaseChangeLog>

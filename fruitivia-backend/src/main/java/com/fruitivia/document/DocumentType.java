@@ -1,0 +1,13 @@
+package com.fruitivia.document;
+
+public enum DocumentType {
+    PROFORMA_INVOICE,
+    COMMERCIAL_INVOICE,
+    PACKING_LIST,
+    BILL_OF_LADING,
+    CERTIFICATE_OF_ORIGIN,
+    PHYTOSANITARY_CERTIFICATE,
+    QUALITY_CERTIFICATE,
+    INSURANCE,
+    OTHER
+}

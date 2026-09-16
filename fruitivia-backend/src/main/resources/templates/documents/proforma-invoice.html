@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Proforma Invoice</title>
+    <style>
+        body { font-family: sans-serif; font-size: 12px; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { margin: 0; padding: 0; }
+        .details-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .details-table td { padding: 5px; vertical-align: top; }
+        .items-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .items-table th, .items-table td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        .items-table th { background-color: #f2f2f2; }
+        .totals { width: 100%; text-align: right; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>PROFORMA INVOICE</h1>
+    <h2 th:text="'Order #: ' + ${order.orderNumber}">Order #</h2>
+</div>
+
+<table class="details-table">
+    <tr>
+        <td width="50%">
+            <strong>Exporter:</strong><br/>
+            Fruitivia Exporters Ltd<br/>
+            123 Export Lane<br/>
+            Global City
+        </td>
+        <td width="50%">
+            <strong>Buyer:</strong><br/>
+            <span th:text="${buyer.companyName}">Company</span><br/>
+            <span th:text="${buyer.address}">Address</span><br/>
+            <span th:text="${buyer.destinationCity} + ', ' + ${buyer.country}">City, Country</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Date:</strong> <span th:text="${#temporals.format(generatedDate, 'yyyy-MM-dd HH:mm')}">Date</span>
+        </td>
+        <td>
+            <strong>Currency:</strong> <span th:text="${order.currencyCode}">USD</span>
+        </td>
+    </tr>
+</table>
+
+<table class="items-table">
+    <thead>
+    <tr>
+        <th>Fruit</th>
+        <th>Variety</th>
+        <th>Quantity (kg)</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${order.items}">
+        <td th:text="${item.fruit}">Mango</td>
+        <td th:text="${item.variety}">Alphonso</td>
+        <td th:text="${item.quantity}">1000</td>
+        <td th:text="${item.unitPrice}">2.50</td>
+        <td th:text="${item.quantity * item.unitPrice}">2500.00</td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="totals">
+    <h3>Total Amount: <span th:text="${order.totalAmount}">0.00</span> <span th:text="${order.currencyCode}">USD</span></h3>
+</div>
+
+</body>
+</html>

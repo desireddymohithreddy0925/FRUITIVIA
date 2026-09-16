@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="16-packaging-schema" author="system">
+        <createTable tableName="packaging_records">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="order_id" type="uuid">
+                <constraints nullable="false" foreignKeyName="fk_packaging_order" referencedTableName="orders" referencedColumnNames="id"/>
+            </column>
+            <column name="status" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="packing_date" type="timestamp with time zone"/>
+            <column name="packed_by" type="varchar(255)"/>
+            <column name="notes" type="text"/>
+            
+            <column name="active" type="boolean" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp with time zone" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp with time zone" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="packaging_items">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="packaging_record_id" type="uuid">
+                <constraints nullable="false" foreignKeyName="fk_pi_packaging" referencedTableName="packaging_records" referencedColumnNames="id"/>
+            </column>
+            <column name="fruit_batch_id" type="uuid">
+                <constraints nullable="false" foreignKeyName="fk_pi_batch" referencedTableName="fruit_batches" referencedColumnNames="id"/>
+            </column>
+            <column name="quantity" type="decimal(10,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="packaging_type" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="package_count" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="package_weight" type="decimal(10,2)"/>
+            <column name="dimensions" type="varchar(100)"/>
+            
+            <column name="active" type="boolean" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp with time zone" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp with time zone" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="packaging_status_history">
+            <column name="id" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="packaging_record_id" type="uuid">
+                <constraints nullable="false" foreignKeyName="fk_psh_packaging" referencedTableName="packaging_records" referencedColumnNames="id"/>
+            </column>
+            <column name="status" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="actor_id" type="uuid">
+                <constraints foreignKeyName="fk_psh_actor" referencedTableName="users" referencedColumnNames="id"/>
+            </column>
+            <column name="notes" type="text"/>
+            
+            <column name="active" type="boolean" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp with time zone" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp with time zone" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createIndex tableName="packaging_records" indexName="idx_packaging_order">
+            <column name="order_id"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>

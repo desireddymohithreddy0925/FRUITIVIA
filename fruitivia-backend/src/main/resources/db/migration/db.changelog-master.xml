@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <include file="db/migration/01-schema-init.xml"/>
+    <include file="db/migration/02-constraints-init.xml"/>
+    <include file="db/migration/03-indexes-init.xml"/>
+    <include file="db/migration/04-reference-data.xml"/>
+    <include file="db/migration/05-supplier-schema-update.xml"/>
+    <include file="db/migration/06-procurement-schema.xml"/>
+    <include file="db/migration/07-quality-control-schema.xml"/>
+    <include file="db/migration/08-fruit-batch-schema.xml"/>
+    <include file="db/migration/09-warehouse-cold-storage.xml"/>
+    <include file="db/migration/10-inventory-schema.xml"/>
+    <include file="db/migration/11-coldchain-schema.xml"/>
+    <include file="db/migration/12-buyer-updates.xml"/>
+    <include file="db/migration/13-quotation-schema.xml"/>
+    <include file="db/migration/14-order-schema.xml"/>
+    <include file="db/migration/15-payment-schema.xml"/>
+    <include file="db/migration/16-packaging-schema.xml"/>
+    <include file="db/migration/17-document-schema.xml"/>
+    <include file="db/migration/18-customs-schema.xml"/>
+    <include file="db/migration/19-shipment-schema.xml"/>
+    <include file="db/migration/20-notification-schema.xml"/>
+    <include file="db/migration/21-audit-schema.xml"/>
+    <include file="db/migration/22-indexes-schema.xml"/>
+</databaseChangeLog>

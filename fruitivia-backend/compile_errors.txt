@@ -1,0 +1,635 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.fruitivia:fruitivia-backend >-------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ fruitivia-backend ---
+[INFO] Deleting /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ fruitivia-backend ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] Copying 21 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ fruitivia-backend ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 228 source files with javac [debug parameters release 21] to target/classes
+[INFO] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/security/JwtAuthenticationFilter.java: /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/security/JwtAuthenticationFilter.java uses or overrides a deprecated API.
+[INFO] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/security/JwtAuthenticationFilter.java: Recompile with -Xlint:deprecation for details.
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/common/event/shipment/CustomsRequiredEvent.java:[8,71] interface expected here
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[37,22] cannot find symbol
+  symbol:   method getStatus()
+  location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[49,87] cannot find symbol
+  symbol:   method getId()
+  location: variable currentUser of type com.fruitivia.user.User
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[51,31] cannot find symbol
+  symbol:   method getBuyer()
+  location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[51,63] cannot find symbol
+  symbol:   method getId()
+  location: variable buyer of type com.fruitivia.buyer.Buyer
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[57,28] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[59,33] cannot find symbol
+  symbol:   method getBuyer()
+  location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[62,40] cannot find symbol
+  symbol:   method getCurrencyCode()
+  location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[63,39] cannot find symbol
+  symbol:   method getTotalAmount()
+  location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[66,45] cannot find symbol
+  symbol:   method getItems()
+  location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[67,40] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[68,33] cannot find symbol
+  symbol:   method getFruit()
+  location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[69,35] cannot find symbol
+  symbol:   method getVariety()
+  location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[70,36] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[71,37] cannot find symbol
+  symbol:   method getUnitPrice()
+  location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[72,37] cannot find symbol
+  symbol:   method getLineTotal()
+  location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[77,14] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[84,67] cannot find symbol
+  symbol:   method getId()
+  location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[80,56] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.order.OrderStatusHistory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[86,16] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable history of type com.fruitivia.order.OrderStatusHistory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[89,64] cannot find symbol
+  symbol:   method getId()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[101,48] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.order.dto.OrderDto
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[102,26] cannot find symbol
+  symbol:   method getId()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[103,35] cannot find symbol
+  symbol:   method getOrderNumber()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[104,35] cannot find symbol
+  symbol:   method getQuotation()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[105,31] cannot find symbol
+  symbol:   method getBuyer()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[106,30] cannot find symbol
+  symbol:   method getStatus()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[107,36] cannot find symbol
+  symbol:   method getCurrencyCode()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[108,35] cannot find symbol
+  symbol:   method getTotalAmount()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[109,33] cannot find symbol
+  symbol:   method getCreatedAt()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[110,29] cannot find symbol
+  symbol:   method getItems()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[111,57] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.order.dto.OrderItemDto
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[71,42] cannot find symbol
+  symbol:   method getStatus()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[83,14] cannot find symbol
+  symbol:   method setStatus(com.fruitivia.order.OrderStatus)
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[86,56] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.order.OrderStatusHistory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[92,16] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable history of type com.fruitivia.order.OrderStatusHistory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[108,26] cannot find symbol
+  symbol:   method getRole()
+  location: variable actor of type com.fruitivia.user.User
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[142,56] cannot find symbol
+  symbol:   method getStatus()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[150,88] cannot find symbol
+  symbol:   method getId()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[156,47] cannot find symbol
+  symbol:   method getStatus()
+  location: variable clearance of type com.fruitivia.customs.CustomsClearance
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[157,143] cannot find symbol
+  symbol:   method getStatus()
+  location: variable clearance of type com.fruitivia.customs.CustomsClearance
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[168,75] cannot find symbol
+  symbol:   method getId()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[170,71] cannot find symbol
+  symbol:   method getId()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[172,74] cannot find symbol
+  symbol:   method getId()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[177,36] cannot find symbol
+  symbol:   method getItems()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[182,37] cannot find symbol
+  symbol:   method getOrderNumber()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[179,25] cannot find symbol
+  symbol:   method getFruit()
+  location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[180,25] cannot find symbol
+  symbol:   method getVariety()
+  location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[181,25] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[183,26] cannot find symbol
+  symbol:   method getId()
+  location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[188,40] cannot find symbol
+  symbol:   method getBatchId()
+  location: variable result of type com.fruitivia.inventory.dto.InventoryAllocationResult
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[190,69] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.order.OrderItemAllocation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[193,41] cannot find symbol
+  symbol:   method getAllocatedQuantity()
+  location: variable result of type com.fruitivia.inventory.dto.InventoryAllocationResult
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[195,27] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable allocation of type com.fruitivia.order.OrderItemAllocation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[198,21] cannot find symbol
+  symbol:   method getAllocations()
+  location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/Order.java:[49,13] cannot find symbol
+  symbol:   method setOrder(com.fruitivia.order.Order)
+  location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[68,36] cannot find symbol
+  symbol:   method getWarehouse()
+  location: variable batch of type com.fruitivia.batch.FruitBatch
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[73,26] cannot find symbol
+  symbol:   method getWarehouse()
+  location: variable location of type com.fruitivia.warehouse.StorageLocation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[73,66] cannot find symbol
+  symbol:   method getId()
+  location: variable warehouse of type com.fruitivia.warehouse.Warehouse
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[78,40] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[82,39] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[83,43] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[90,18] cannot find symbol
+  symbol:   method setActive(boolean)
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[93,79] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[94,41] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[94,64] cannot find symbol
+  symbol:   method getReason()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[94,85] cannot find symbol
+  symbol:   method getReference()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[103,33] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[104,22] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[108,22] cannot find symbol
+  symbol:   method getBatch()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[109,54] cannot find symbol
+  symbol:   method getBatch()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[113,38] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[114,49] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[115,48] cannot find symbol
+  symbol:   method getReservedQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[119,94] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[120,24] cannot find symbol
+  symbol:   method getReason()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[120,45] cannot find symbol
+  symbol:   method getReference()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[122,73] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[123,73] cannot find symbol
+  symbol:   method getBatch()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[123,114] cannot find symbol
+  symbol:   method getBatch()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[133,33] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[134,22] cannot find symbol
+  symbol:   method getReservedQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[138,38] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[139,48] cannot find symbol
+  symbol:   method getReservedQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[140,49] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[144,94] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[145,24] cannot find symbol
+  symbol:   method getReason()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[145,45] cannot find symbol
+  symbol:   method getReference()
+  location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[161,71] cannot find symbol
+  symbol:   method getId()
+  location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[162,51] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[166,32] cannot find symbol
+  symbol:   method getBatch()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[167,64] cannot find symbol
+  symbol:   method getBatch()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[173,48] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[174,65] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[175,64] cannot find symbol
+  symbol:   method getReservedQuantity()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[179,118] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[181,83] cannot find symbol
+  symbol:   method getAvailableQuantity()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[182,83] cannot find symbol
+  symbol:   method getBatch()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[182,130] cannot find symbol
+  symbol:   method getBatch()
+  location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[185,78] cannot find symbol
+  symbol:   method builder()
+  location: class com.fruitivia.inventory.dto.InventoryAllocationResult
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.945 s
+[INFO] Finished at: 2026-09-14T11:02:24+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:compile (default-compile) on project fruitivia-backend: Compilation failure: Compilation failure: 
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/common/event/shipment/CustomsRequiredEvent.java:[8,71] interface expected here
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[37,22] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[49,87] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable currentUser of type com.fruitivia.user.User
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[51,31] cannot find symbol
+[ERROR]   symbol:   method getBuyer()
+[ERROR]   location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[51,63] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable buyer of type com.fruitivia.buyer.Buyer
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[57,28] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[59,33] cannot find symbol
+[ERROR]   symbol:   method getBuyer()
+[ERROR]   location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[62,40] cannot find symbol
+[ERROR]   symbol:   method getCurrencyCode()
+[ERROR]   location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[63,39] cannot find symbol
+[ERROR]   symbol:   method getTotalAmount()
+[ERROR]   location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[66,45] cannot find symbol
+[ERROR]   symbol:   method getItems()
+[ERROR]   location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[67,40] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[68,33] cannot find symbol
+[ERROR]   symbol:   method getFruit()
+[ERROR]   location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[69,35] cannot find symbol
+[ERROR]   symbol:   method getVariety()
+[ERROR]   location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[70,36] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[71,37] cannot find symbol
+[ERROR]   symbol:   method getUnitPrice()
+[ERROR]   location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[72,37] cannot find symbol
+[ERROR]   symbol:   method getLineTotal()
+[ERROR]   location: variable qItem of type com.fruitivia.quotation.QuotationItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[77,14] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[84,67] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable quotation of type com.fruitivia.quotation.Quotation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[80,56] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.order.OrderStatusHistory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[86,16] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable history of type com.fruitivia.order.OrderStatusHistory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[89,64] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[101,48] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.order.dto.OrderDto
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[102,26] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[103,35] cannot find symbol
+[ERROR]   symbol:   method getOrderNumber()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[104,35] cannot find symbol
+[ERROR]   symbol:   method getQuotation()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[105,31] cannot find symbol
+[ERROR]   symbol:   method getBuyer()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[106,30] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[107,36] cannot find symbol
+[ERROR]   symbol:   method getCurrencyCode()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[108,35] cannot find symbol
+[ERROR]   symbol:   method getTotalAmount()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[109,33] cannot find symbol
+[ERROR]   symbol:   method getCreatedAt()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[110,29] cannot find symbol
+[ERROR]   symbol:   method getItems()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderService.java:[111,57] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.order.dto.OrderItemDto
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[71,42] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[83,14] cannot find symbol
+[ERROR]   symbol:   method setStatus(com.fruitivia.order.OrderStatus)
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[86,56] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.order.OrderStatusHistory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[92,16] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable history of type com.fruitivia.order.OrderStatusHistory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[108,26] cannot find symbol
+[ERROR]   symbol:   method getRole()
+[ERROR]   location: variable actor of type com.fruitivia.user.User
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[142,56] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[150,88] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[156,47] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable clearance of type com.fruitivia.customs.CustomsClearance
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[157,143] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable clearance of type com.fruitivia.customs.CustomsClearance
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[168,75] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[170,71] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[172,74] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[177,36] cannot find symbol
+[ERROR]   symbol:   method getItems()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[182,37] cannot find symbol
+[ERROR]   symbol:   method getOrderNumber()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[179,25] cannot find symbol
+[ERROR]   symbol:   method getFruit()
+[ERROR]   location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[180,25] cannot find symbol
+[ERROR]   symbol:   method getVariety()
+[ERROR]   location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[181,25] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[183,26] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable order of type com.fruitivia.order.Order
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[188,40] cannot find symbol
+[ERROR]   symbol:   method getBatchId()
+[ERROR]   location: variable result of type com.fruitivia.inventory.dto.InventoryAllocationResult
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[190,69] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.order.OrderItemAllocation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[193,41] cannot find symbol
+[ERROR]   symbol:   method getAllocatedQuantity()
+[ERROR]   location: variable result of type com.fruitivia.inventory.dto.InventoryAllocationResult
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[195,27] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable allocation of type com.fruitivia.order.OrderItemAllocation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/OrderStateMachineService.java:[198,21] cannot find symbol
+[ERROR]   symbol:   method getAllocations()
+[ERROR]   location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/order/Order.java:[49,13] cannot find symbol
+[ERROR]   symbol:   method setOrder(com.fruitivia.order.Order)
+[ERROR]   location: variable item of type com.fruitivia.order.OrderItem
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[68,36] cannot find symbol
+[ERROR]   symbol:   method getWarehouse()
+[ERROR]   location: variable batch of type com.fruitivia.batch.FruitBatch
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[73,26] cannot find symbol
+[ERROR]   symbol:   method getWarehouse()
+[ERROR]   location: variable location of type com.fruitivia.warehouse.StorageLocation
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[73,66] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable warehouse of type com.fruitivia.warehouse.Warehouse
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[78,40] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[82,39] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[83,43] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[90,18] cannot find symbol
+[ERROR]   symbol:   method setActive(boolean)
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[93,79] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[94,41] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[94,64] cannot find symbol
+[ERROR]   symbol:   method getReason()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[94,85] cannot find symbol
+[ERROR]   symbol:   method getReference()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[103,33] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[104,22] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[108,22] cannot find symbol
+[ERROR]   symbol:   method getBatch()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[109,54] cannot find symbol
+[ERROR]   symbol:   method getBatch()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[113,38] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[114,49] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[115,48] cannot find symbol
+[ERROR]   symbol:   method getReservedQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[119,94] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[120,24] cannot find symbol
+[ERROR]   symbol:   method getReason()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[120,45] cannot find symbol
+[ERROR]   symbol:   method getReference()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[122,73] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[123,73] cannot find symbol
+[ERROR]   symbol:   method getBatch()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[123,114] cannot find symbol
+[ERROR]   symbol:   method getBatch()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[133,33] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[134,22] cannot find symbol
+[ERROR]   symbol:   method getReservedQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[138,38] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[139,48] cannot find symbol
+[ERROR]   symbol:   method getReservedQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[140,49] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[144,94] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[145,24] cannot find symbol
+[ERROR]   symbol:   method getReason()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[145,45] cannot find symbol
+[ERROR]   symbol:   method getReference()
+[ERROR]   location: variable request of type com.fruitivia.inventory.dto.InventoryOperationRequest
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[161,71] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable inventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[162,51] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[166,32] cannot find symbol
+[ERROR]   symbol:   method getBatch()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[167,64] cannot find symbol
+[ERROR]   symbol:   method getBatch()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[173,48] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[174,65] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[175,64] cannot find symbol
+[ERROR]   symbol:   method getReservedQuantity()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[179,118] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[181,83] cannot find symbol
+[ERROR]   symbol:   method getAvailableQuantity()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[182,83] cannot find symbol
+[ERROR]   symbol:   method getBatch()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[182,130] cannot find symbol
+[ERROR]   symbol:   method getBatch()
+[ERROR]   location: variable lockedInventory of type com.fruitivia.inventory.Inventory
+[ERROR] /Users/desireddymohithreddy/Library/Mobile Documents/com~apple~CloudDocs/Fruitivia/fruitivia-backend/src/main/java/com/fruitivia/inventory/InventoryService.java:[185,78] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.fruitivia.inventory.dto.InventoryAllocationResult
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

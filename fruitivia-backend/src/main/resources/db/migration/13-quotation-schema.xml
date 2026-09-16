@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="13-quotation-schema-1" author="antigravity">
+        <!-- Quotations Table -->
+        <createTable tableName="quotations">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="buyer_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_quotation_buyer" referencedTableName="buyers" referencedColumnNames="id"/>
+            </column>
+            <column name="status" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="currency_code" type="VARCHAR(3)"/>
+            <column name="packaging_cost" type="DECIMAL(19,4)"/>
+            <column name="transportation_cost" type="DECIMAL(19,4)"/>
+            <column name="export_handling_cost" type="DECIMAL(19,4)"/>
+            <column name="shipping_cost" type="DECIMAL(19,4)"/>
+            <column name="insurance_cost" type="DECIMAL(19,4)"/>
+            <column name="discount" type="DECIMAL(19,4)"/>
+            <column name="tax_amount" type="DECIMAL(19,4)"/>
+            <column name="total_amount" type="DECIMAL(19,4)"/>
+            <column name="payment_terms" type="TEXT"/>
+            <column name="validity_date" type="TIMESTAMP WITH TIME ZONE"/>
+            
+            <!-- BaseEntity fields -->
+            <column name="active" type="BOOLEAN" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <!-- Quotation Items Table -->
+        <createTable tableName="quotation_items">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="quotation_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_quotation_item_quotation" referencedTableName="quotations" referencedColumnNames="id"/>
+            </column>
+            <column name="fruit_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_quotation_item_fruit" referencedTableName="fruits" referencedColumnNames="id"/>
+            </column>
+            <column name="variety_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_quotation_item_variety" referencedTableName="fruit_varieties" referencedColumnNames="id"/>
+            </column>
+            <column name="quantity" type="DECIMAL(19,4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="unit_price" type="DECIMAL(19,4)"/>
+            <column name="line_total" type="DECIMAL(19,4)"/>
+
+            <!-- BaseEntity fields -->
+            <column name="active" type="BOOLEAN" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <!-- Quotation Status History Table -->
+        <createTable tableName="quotation_status_history">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="quotation_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_quotation_history_quotation" referencedTableName="quotations" referencedColumnNames="id"/>
+            </column>
+            <column name="status" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="actor_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_quotation_history_actor" referencedTableName="users" referencedColumnNames="id"/>
+            </column>
+            <column name="notes" type="TEXT"/>
+
+            <!-- Immutable entity fields -->
+            <column name="timestamp" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createIndex tableName="quotations" indexName="idx_quotation_buyer">
+            <column name="buyer_id"/>
+        </createIndex>
+        <createIndex tableName="quotations" indexName="idx_quotation_status">
+            <column name="status"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="11-coldchain-schema" author="fruitivia">
+        <createTable tableName="temperature_readings">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="batch_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_temp_batch" referencedTableName="fruit_batches" referencedColumnNames="id"/>
+            </column>
+            <column name="warehouse_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_temp_warehouse" referencedTableName="warehouses" referencedColumnNames="id"/>
+            </column>
+            <column name="temperature" type="DECIMAL(5, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="humidity" type="DECIMAL(5, 2)"/>
+            <column name="timestamp" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="source" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notes" type="VARCHAR(500)"/>
+            <column name="active" type="BOOLEAN" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createIndex tableName="temperature_readings" indexName="idx_temp_batch_id">
+            <column name="batch_id"/>
+        </createIndex>
+
+        <createTable tableName="cold_chain_events">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="batch_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_event_batch" referencedTableName="fruit_batches" referencedColumnNames="id"/>
+            </column>
+            <column name="warehouse_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_event_warehouse" referencedTableName="warehouses" referencedColumnNames="id"/>
+            </column>
+            <column name="event_type" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="event_timestamp" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notes" type="VARCHAR(1000)"/>
+            <column name="active" type="BOOLEAN" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createIndex tableName="cold_chain_events" indexName="idx_event_batch_id">
+            <column name="batch_id"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>

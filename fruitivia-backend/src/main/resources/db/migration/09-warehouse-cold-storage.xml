@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet id="09-warehouse-cold-storage-01" author="fruitivia">
+        <!-- Update existing warehouses with a default type and capacity if null -->
+        <update tableName="warehouses">
+            <column name="type" value="GENERAL"/>
+            <where>type IS NULL</where>
+        </update>
+        <update tableName="warehouses">
+            <column name="capacity" value="0"/>
+            <where>capacity IS NULL</where>
+        </update>
+
+        <!-- Alter table to enforce constraints and add new columns -->
+        <addNotNullConstraint tableName="warehouses" columnName="type" columnDataType="VARCHAR(50)"/>
+        <addNotNullConstraint tableName="warehouses" columnName="capacity" columnDataType="FLOAT"/>
+
+        <addColumn tableName="warehouses">
+            <column name="min_temperature" type="FLOAT"/>
+            <column name="max_temperature" type="FLOAT"/>
+            <column name="min_humidity" type="FLOAT"/>
+            <column name="max_humidity" type="FLOAT"/>
+        </addColumn>
+
+        <!-- Add constraints to fruit_varieties -->
+        <addColumn tableName="fruit_varieties">
+            <column name="min_storage_temperature" type="FLOAT"/>
+            <column name="max_storage_temperature" type="FLOAT"/>
+        </addColumn>
+
+        <!-- Create storage_locations table -->
+        <createTable tableName="storage_locations">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="location_code" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="warehouse_id" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_sl_warehouse" references="warehouses(id)"/>
+            </column>
+            <column name="capacity" type="DECIMAL(19,4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="current_usage" type="DECIMAL(19,4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="BOOLEAN" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>
